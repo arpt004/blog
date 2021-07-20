@@ -1,0 +1,13 @@
+<%- include("partials/header") -%>
+
+<form action="/delete" method="POST">
+    <button type="submit" style="margin-left: 90%;" name="icon" value="<%= id %>">
+        <i class="fa fa-trash"></i>
+    </button></form>
+<h1> <u> <%= st %> </u> </h1> <br>
+
+<p> <img src= <%= fileUrl %> alt="" style=" height: 200px; width: 250px; " ></p> <br>
+<p> <%= storedContent %> </p>
+
+<br><br><br><br><br><br><br><br><br>
+<%- include("partials/footer") -%>

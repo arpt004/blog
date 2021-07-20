@@ -1,0 +1,34 @@
+<%- include("partials/header") -%>
+<strong><a href="/compose"> <b> Add+ </b>  </a> </strong>
+<p style="margin-left: 85% ;"> <%= date %></p>
+<!-- For loop -->
+<!-- <%  for (i=0; i< postContent.length; i++){ %>
+        <h3> <%= postContent[i].title %> </h3>
+        <p> <%= postContent[i].content %> </p>
+<%  } %> -->
+
+<!-- forEach -->
+<ol>
+</ul>
+<%  postContent.forEach( function(eachPost){ %>
+<ul>
+<form action="/delete" method="POST">
+    <h2>  <%= eachPost.name %> </h2> </a>
+    <p> <%= eachPost.content.substring(0, 100) + "..." %> 
+        <a href="/post/<%= eachPost.name %>"> Read more </a>
+        <p>
+            <button type="submit" style= "margin-left: 80%;" value="<%= eachPost._id %>" name="icon">
+                <i class="fa fa-trash fa-lg"></i>
+            </button>
+
+        </p>
+    </p>
+</form>
+</ul>
+<%  }) %>
+</ol>
+
+
+
+<%- include("partials/footer") -%>
+
